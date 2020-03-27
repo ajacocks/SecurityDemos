@@ -12,6 +12,9 @@ cloud_provider: ec2                     # Which AgnosticD Cloud Provider to use
 aws_region: us-east-1                   # AWS Region to deploy in
 HostedZoneId: {{ zone_id }}             # You will need to change this
 
+# Set the password for the 'lab-user' user, here:
+user_password: {{ password }}
+
 repo_method: satellite
 satellite_url: labsat.opentlc.com
 satellite_activationkey: rhel8-summit
