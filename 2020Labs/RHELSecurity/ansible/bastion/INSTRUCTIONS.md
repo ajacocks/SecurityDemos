@@ -25,6 +25,11 @@ Instructions:
     targetHost 	bastion.3724.sandbox744.opentlc.com
     uuid 	3c09f0bb-9797-4b18-b440-2e03d353792c``` 
 
+2. Add the password that you want the 'lab-user' user to have, where it says:
+
+    ```# Set the password for the 'lab-user' user, here:
+user_password: {{ password }}```
+
 2. Edit the file **inventory** in this directory, and fill in the above values, like this:
    
     ```[bastion]
