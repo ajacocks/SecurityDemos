@@ -48,28 +48,6 @@ node_instance_image: RHEL81
 remote_user: ec2-user                   # Needed to workaround some bug.
 
 #
-# Security Groups
-#
-security_groups:
-  - name: BastionSG
-    rules:
-      - name: BasSSHPublic
-        description: "SSH public"
-        from_port: 22
-        to_port: 22
-        protocol: tcp
-        cidr: "0.0.0.0/0"
-        rule_type: Ingress
-
-      - name: Bas8080Public
-        description: "8080 public"
-        from_port: 8080
-        to_port: 8080
-        protocol: tcp
-        cidr: "0.0.0.0/0"
-        rule_type: Ingress
-
-#
 # This key pair will get injected into /root/.ssh on all hosts.
 # ssh private key:
 #
