@@ -67,7 +67,12 @@ Instructions:
 
     ```$ ./run.sh selinux```
 
-5. Change directories to **~/aws/testrun/agnosticd/ansible** and execute the playbook, to build the RHEL 8 hosts:
-   
-    ```$ ansible-playbook main.yml -e @~/aws/myconfigs/sample_vars.yml -e @~/.aws/opentlc_creds.yml```
+6. When you want to shut the environment down, do the following:
 
+   For RHEL Security Lab, do this:
+
+    ```$ ./stop.sh rhel```
+
+   For SELinux Policy Workshop, do this:
+
+    ```$ ./stop.sh selinux```
