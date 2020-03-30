@@ -57,6 +57,16 @@ Instructions:
    
     ```$ ssh generic_naps_ajacocks@bastion.3724.sandbox744.opentlc.com```
 
+5. To start provisioning the labs, do the following:
+
+   For RHEL Security Lab, do this:
+
+    ```$ ./run.sh rhel```
+
+   For SELinux Policy Workshop, do this:
+
+    ```$ ./run.sh selinux```
+
 5. Change directories to **~/aws/testrun/agnosticd/ansible** and execute the playbook, to build the RHEL 8 hosts:
    
     ```$ ansible-playbook main.yml -e @~/aws/myconfigs/sample_vars.yml -e @~/.aws/opentlc_creds.yml```
