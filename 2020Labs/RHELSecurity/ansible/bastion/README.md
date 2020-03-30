@@ -25,7 +25,7 @@ Instructions:
     targetHost 	bastion.3724.sandbox744.opentlc.com
     uuid 	3c09f0bb-9797-4b18-b440-2e03d353792c``` 
 
-2. Edit the file **inventory** in this directory, and fill in the above values, like this:
+2. Edit the file **inventory** in this directory, and fill in the above values, like this. Make sure that you put a password in, where it says {{ password }}:
    
     ```[bastion]
     # put the name of the bastion host (targetHost), here
@@ -47,7 +47,7 @@ Instructions:
     ansible_user=generic_naps_ajacocks
     ansible_password=CCCCCCCCCCCC
     # Set the password for the 'lab-user' user, here:
-    user_password: {{ password }}```
+    user_password={{ password }}```
 
 3. Run the playbook, to configure the bastion host:
    
