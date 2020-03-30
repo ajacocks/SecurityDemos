@@ -25,11 +25,6 @@ Instructions:
     targetHost 	bastion.3724.sandbox744.opentlc.com
     uuid 	3c09f0bb-9797-4b18-b440-2e03d353792c``` 
 
-2. Add the password that you want the 'lab-user' user to have, where it says:
-
-    ```# Set the password for the 'lab-user' user, here:
-user_password: {{ password }}```
-
 2. Edit the file **inventory** in this directory, and fill in the above values, like this:
    
     ```[bastion]
@@ -50,7 +45,9 @@ user_password: {{ password }}```
     ansible_connection=ssh
     # put the user and password, from OpenTLC CloudForms, here
     ansible_user=generic_naps_ajacocks
-    ansible_password=CCCCCCCCCCCC```
+    ansible_password=CCCCCCCCCCCC
+    # Set the password for the 'lab-user' user, here:
+    user_password: {{ password }}```
 
 3. Run the playbook, to configure the bastion host:
    
